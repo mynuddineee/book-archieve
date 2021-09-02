@@ -22,7 +22,7 @@
     const url = `https://openlibrary.org/search.json?q=${searchText}`;
     fetch(url)
     .then(res => res.json())
-    .then(data => bookSearchResult(data.docs));
+    .then(data => bookSearchResult(data.docs.slice(0,20)));
 }
 
 //bookSearch();
