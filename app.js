@@ -1,15 +1,24 @@
+// variable
     const errorDiv =  document.getElementById('error-handle');
-// Fetc the URL
+    const searchResultContainer = document.getElementById('result-container');
+    const searchResultCount = document.getElementById('search-count');
+
+
+// Fetch the URL
     const bookSearch = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
+    searchField.value = '';
 
 // Error handling, when click the button but field is empty
     if (searchText === "") {
         errorDiv.innerText = "Search field cannot be empty.";
+        searchResultContainer.textContent = '';
+        searchResultCount.textContent = '';
         return;
       }
-    searchField.value = '';
+     
+    
     const url = `https://openlibrary.org/search.json?q=${searchText}`;
     fetch(url)
     .then(res => res.json())
@@ -17,10 +26,10 @@
 }
 
 //bookSearch();
-// Display the result function
+
+// Display the search result function
 const bookSearchResult = (results) =>{
-    const searchResultContainer = document.getElementById('result-container');
-    const searchResultCount = document.getElementById('search-count');
+    
     searchResultCount.innerHTML = `<p class="card-text text-center mb-3 fw-bold fs-4 text text-success">Search Result: ${results.length}</p>`
     searchResultContainer.textContent = '';
 
