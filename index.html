@@ -8,24 +8,37 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 <body>
+    <!--Search area start-->
     <h2 class="text-center text-primary my-3">Search Your Favorite Book</h2>
     <div class="input-group mb-3 mx-auto w-50 mb-3">
         <input id="search-field" type="text" class="form-control" placeholder="Search Book" aria-label="Recipient's username" aria-describedby="button-addon2">
         <button onclick="bookSearch()" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
-      </div>
-      <section class="container mt-2">
+    </div>
+    <!--Search area End-->
+
+    <!--Error message display area start-->
+    <section class="container mt-2">
         <div id="error-handle" class="text-center"></div>
-      </section>
-      <section id="search-count">
-
-      </section>
-
-    <section >
-        <div id="result-container" class="row row-cols-1 row-cols-md-3 g-4">
-            
-          </div>
     </section>
+    <!--Error message display area End-->
+
+    <!--Search item count display area start-->
+    <section id="search-count">
+
+    </section>
+    <!--Search item count display area End-->
+
+    <!--Search display area start-->
+    <section >
+    <div id="result-container" class="row row-cols-1 row-cols-md-3 g-4">
+            
+    </div>
+    </section>
+    <!--Search display area end-->
+
+    <!--java script link start-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="app.js"></script>
+    <!--java script link end-->
 </body>
 </html>

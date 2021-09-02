@@ -1,8 +1,10 @@
-const errorDiv =  document.getElementById('error-handle');
-//const urlImage = (`https://covers.openlibrary.org/b/id/${cover_i}-M.jpg}`);
-const bookSearch = () => {
+    const errorDiv =  document.getElementById('error-handle');
+// Fetc the URL
+    const bookSearch = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
+
+// Error handling, when click the button but field is empty
     if (searchText === "") {
         errorDiv.innerText = "Search field cannot be empty.";
         return;
@@ -15,13 +17,14 @@ const bookSearch = () => {
 }
 
 //bookSearch();
-
+// Display the result function
 const bookSearchResult = (results) =>{
     const searchResultContainer = document.getElementById('result-container');
     const searchResultCount = document.getElementById('search-count');
-    
     searchResultCount.innerHTML = `<p class="card-text text-center mb-3 fw-bold fs-4 text text-success">Search Result: ${results.length}</p>`
     searchResultContainer.textContent = '';
+
+// Error handling, if search item text not matched
     if (results.length === 0){
         errorDiv.innerText = 'No Result found';
     }
@@ -45,10 +48,6 @@ const bookSearchResult = (results) =>{
                 </div>
             `
             searchResultContainer.appendChild(div);
-          
-        });
-    
-   
-    
+        });  
     
 }
